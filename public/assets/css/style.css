@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'unigoen64-rail-light';
+    src: url(../fonts/Unigeo64-Light-trial.ttf);
+}
+@font-face {
+    font-family:'madeokines' ;
+    src: url(../fonts/MADEOkineSansPERSONALUSE-Regular.otf);
+}
+@font-face {
+    font-family:'Unigeo64-Medium-trial' ;
+    src: url(../fonts/Unigeo64-Medium-trial.ttf);
+}
+@font-face {
+    font-family: 'Unigeo64-Bold-trial';
+    src: url(../fonts/Unigeo64-Bold-trial.ttf);
+}
+@font-face {
+    font-family:'Unigeo128-Regular-trial' ;
+    src: url(../fonts/Unigeo128-Regular-trial.ttf);
+}
+.overlay img{
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    /* object-fit: fit-content; */
+}
+.home-content{
+    position: absolute;
+    right: 200px;
+    top: 40%;
+    transform: translateY(-50%);
+}
+.home-content h1{
+    font-size: 80px;
+    color: #fff;
+font-family: 'madeokines';
+font-weight: 96;
+}
+.home .home-content .pa-welcome{
+    font-weight: 36;
+font-family: 'unigoen64-rail-light';
+    position: relative;
+top: 30px;
+/* left: 10px; */
+color: #ffffff;
+}
+.home .home-content .pa-let{
+    color: #ffffff;
+    margin-left: 20px;
+    font-family:'Unigeo128-Regular-trial' ;
+    font-weight: 32;
+}
+
+.home-btn{
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+bottom: 20px;
+}
+
+.home-btn .btn{
+    width: 200px;
+    /* padding: 5px; */
+    background-color: #fff;
+    color: black;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Unigeo64-Medium-trial';
+    font-weight: 36;
+    color: #021B3A;
+}
+
+.home-btn .btn:hover
+{
+    background-color: black;
+    color: #fff;
+}
+
+.home-btn p{
+    color: #ffffff;
+    display: inline;
+    font-size: 10px;
+   margin-left: 30px;
+   font-family: 'unigoen64-rail-light';
+font-weight: 20;
+}
+.log-in{
+    text-decoration: none;
+    color: #fff;
+    /* font-size: 15px; */
+    font-family: 'Unigeo64-Bold-trial';
+font-weight: 24;
+}
+.log-in:hover{
+    color: #fff;
+}
+
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    
+    .home-content{
+        right: 10px;
+    }
+    .home-content h1{
+        font-size: 40px;
+    }
+    .home .home-content .pa-welcome{
+        top: 30px;
+    }
+ }
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    
+    .home-content{
+        right: 30px;
+    }
+    .home-content h1{
+        font-size: 60px;
+    }
+    .home .home-content .pa-welcome{
+        top: 30px;
+    }
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    
+    .home-content{
+        right: 100px;
+    }
+    .home-content h1{
+        font-size: 65px;
+    }
+    .home .home-content .pa-welcome{
+        top: 30px;
+    }
+  }
+
+  /* // Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) and (max-width: 1199.98px) { 
+   
+    .home-content{
+        right: 150px;
+    }
+    .home-content h1{
+        font-size: 75px;
+    }
+    .home .home-content .pa-welcome{
+        top: 30px;
+    }
+   }
+  

@@ -1,0 +1,179 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'MADEOkineSansPERSONALUSE-Regular';
+    src: url(../fonts/MADEOkineSansPERSONALUSE-Regular.otf);
+}
+@font-face {
+    font-family: 'Unigeo64-Light-trial';
+    src: url(../fonts/Unigeo64-Light-trial.ttf);
+}
+@font-face {
+    font-family:'Unigeo64-Semibold-trial' ;
+    src: url(../fonts/Unigeo64-Semibold-trial.ttf);
+}
+.overlay img{
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    filter: blur(5px);
+}
+.logo{
+    display: flex;
+
+    /* margin: 30px; */
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.logo img{
+    width: 116px;
+    height: 96px;
+    margin-top: 15px;
+}
+
+.logo h2{
+    font-family: 'MADEOkineSansPERSONALUSE-Regular';
+font-weight: 128;
+    font-size: 100px;
+    margin-left: 5px;
+    color: white;
+}
+
+.form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    width: 300px;
+}
+.form input{
+    /* font-family: 'Unigeo64-Light-trial'; */
+font-weight: 20;
+width: 100%;
+margin: 10px 0;
+outline: none;
+border: none;
+border-radius: 5px;
+padding: 5px;
+background-color: #dde3eb;
+color: #021b3a;
+height: 40px;
+}
+
+
+
+.btn1{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 15px;
+    font-family:'Unigeo64-Semibold-trial' ;
+font-weight: 32;
+color: #021B3A;
+}
+
+.btn1:hover{
+    background-color: black;
+    color: white;
+}
+
+.icon{
+    color: red;
+    font-size: 10px;
+}
+p{
+    color: red;
+    font-size: 10px;
+    margin-bottom: -5px;
+    margin-top: -5px;
+    padding-left: 5px;
+    font-family: 'Unigeo64-Light-trial';
+font-weight: 16;
+}
+
+.sign-up{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-55%);
+    bottom: 20px;
+}
+
+.sign-up-p{
+    color: gainsboro;
+    display: inline;
+    font-size: 15px;
+   margin-left: 30px;
+   font-family: 'Unigeo64-Light-trial';
+font-weight: 20;
+}
+.sign-up-a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    font-family:'Unigeo64-Semibold-trial' ;
+font-weight: 24;
+}
+.sign-up-a:hover{
+    color: #fff;
+}
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    /* .form{
+        margin-top: 20px;
+       } */
+    .logo img{
+        width: 50px;
+        height: 50px;
+    }
+    .logo h2{ 
+        font-size: 60px;
+    }
+    .sign-up-p{
+        margin-left:0 ;
+    }
+ }
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    /* .form{
+        margin-top: 40px;
+       } */
+       .logo img{
+        width: 60px;
+        height: 60px;
+    }
+    .logo h2{ 
+        font-size: 80px;
+    }
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .logo img{
+        width: 60px;
+        height: 60px;
+    }
+    .logo h2{ 
+        font-size: 80px;
+    }
+  }
+
+  /* // Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) and (max-width: 1199.98px) { 
+    .logo img{
+        width: 70px;
+        height: 70px;
+    }
+    .logo h2{ 
+        font-size: 85px;
+    }
+    
+   }
