@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
         <!-- Styles -->
-        @vite(['resources/css/app.css'])
+        <!-- @vite(['resources/css/app.css']) -->
     </head>
         <body class="antialiased">
             <div class="overlay">
