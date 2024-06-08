@@ -47,7 +47,14 @@ class APIAuthController extends Controller
         // Create the user
         $user = $this->createNewUser->create($input);
 
-        return response()->json(['user' => $user], 201);
+        // Generate the token
+        $token = $user->createToken('auth_token')->plainTextToken;
+
+        return response()->json([
+            'user' => $user,
+            'access_token' => $token,
+            'token_type' => 'Bearer',
+        ], 201);
     } catch (\Exception $e) {
         // Log the error
         Log::error('User Registration Failed', [
@@ -58,35 +65,36 @@ class APIAuthController extends Controller
         return response()->json(['error' => 'Registration failed.'], 500);
     }
 }
+
     public function login(Request $request)
-{
-    try {
-        $credentials = $request->only('email', 'password');
+    {
+        try {
+            $credentials = $request->only('email', 'password');
 
-        if (Auth::attempt($credentials)) {
-            $user = Auth::user();
+            if (Auth::attempt($credentials)) {
+                $user = Auth::user();
 
-            if (!$user instanceof User) {
-                return response()->json(['error' => 'Authenticated user is not an instance of User model'], 500);
+                if (!$user instanceof User) {
+                    return response()->json(['error' => 'Authenticated user is not an instance of User model'], 500);
+                }
+
+                // Create and return the Sanctum API token for the logged-in user
+                return response()->json([
+                    'user' => $user,
+                    'token' => $user->createToken('auth_token')->plainTextToken,
+                ]);
             }
 
-            // Create and return the Sanctum API token for the logged-in user
-            return response()->json([
-                'user' => $user,
-                'token' => $user->createToken('auth_token')->plainTextToken,
+            return response()->json(['error' => 'Invalid credentials'], 401);
+        } catch (\Exception $e) {
+            Log::error('User Login Failed', [
+                'error' => $e->getMessage(),
+                'trace' => $e->getTraceAsString()
             ]);
+
+            return response()->json(['error' => 'Login failed.'], 500);
         }
-
-        return response()->json(['error' => 'Invalid credentials'], 401);
-    } catch (\Exception $e) {
-        Log::error('User Login Failed', [
-            'error' => $e->getMessage(),
-            'trace' => $e->getTraceAsString()
-        ]);
-
-        return response()->json(['error' => 'Login failed.'], 500);
     }
-}
 public function logout(Request $request)
 {
     try {

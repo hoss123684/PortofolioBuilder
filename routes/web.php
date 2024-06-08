@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\SubdomainController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,3 +40,8 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('create' , function(){
+    return view('create');
+})->name('createWeb');
+Route::post('subdomain',[SubdomainController::class,'store'])->name('subdomain.store');
