@@ -112,65 +112,6 @@ nav {
   color: #403f3f;
 }
 
-.home {
-  background-color: #d6dee7;
-  padding: 20px;
-}
-
-.home-top-box {
-  width: 90%;
-  /* width: 1142px; */
-  height: 201px;
-  top: 149px;
-  left: 70px;
-  gap: 0px;
-  border-radius: 20px 20px 20px 20px;
-  opacity: 0px;
-  background-color: #314268;
-  margin: auto;
-}
-
-.home-top-box p {
-  font-family: "Unigeo64-Light-trial";
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 38.4px;
-  text-align: left;
-  color: #d8d5d5;
-  padding: 10px;
-}
-
-.home-top-box span {
-  font-family: "MADEOkineSansPERSONALUSE-Regular";
-  font-size: 48px;
-  font-weight: 400;
-  line-height: 60.72px;
-  text-align: left;
-  color: #f7c26d;
-}
-
-.home-bottom-box {
-  width: 240px;
-  height: 240px;
-  /* top: 425px; */
-  /* left: 70px; */
-  gap: 0px;
-  border-radius: 20px 20px 20px 20px;
-  opacity: 0px;
-  background-color: #314268;
-  margin-top: -10px;
-  margin-left: 70px;
-}
-
-.p-center {
-  font-family: "Unigeo64-Light-trial";
-  font-size: 32px;
-  font-weight: 300;
-  line-height: 38.4px;
-  margin-left: 70px;
-  color: #686868;
-}
-
 .account-settings {
   position: absolute;
   width: 236px;
@@ -197,7 +138,7 @@ nav {
   font-weight: 500;
   line-height: 19.2px;
   text-align: left;
-  color: #b6b4b4;
+  color: #d8d3d3;
 }
 
 .account-settings .p-mail {
@@ -252,10 +193,93 @@ nav {
   display: block;
 }
 
+.home {
+  background-color: #d6dee7;
+  padding: 20px;
+}
+
+.home-top-box {
+  width: 90%;
+  /* width: 1142px; */
+  height: 200px;
+  top: 149px;
+  left: 70px;
+  gap: 0px;
+  border-radius: 20px 20px 20px 20px;
+  opacity: 0px;
+  background-color: #314268;
+  margin: auto;
+  padding-left: 30px;
+}
+
+.home-top-box p {
+  font-family: "Unigeo64-Light-trial";
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38.4px;
+  text-align: left;
+  color: #d8d5d5;
+  padding: 10px;
+}
+
+.home-top-box span {
+  font-family: "MADEOkineSansPERSONALUSE-Regular";
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 60.72px;
+  text-align: left;
+  color: #f7c26d;
+}
+
+.home-bottom-box {
+  width: 90%;
+  height: 200px;
+  /* top: 425px; */
+  /* left: 70px; */
+  gap: 0px;
+  border-radius: 20px 20px 20px 20px;
+  opacity: 0px;
+  background-color: #314268;
+  margin-top: -10px;
+  margin-left: 70px;
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.p-center {
+  font-family: "Unigeo64-Light-trial";
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 38.4px;
+  margin-left: 70px;
+  color: #403F3F;
+}
+
+.home-bottom-box h3{
+  font-family:'Unigeo64-Regular-trial' ;
+color: #dbd8d8;
+}
+
+.home-bottom-box p{
+  font-family: "Unigeo64-Light-trial";
+color: #dad5d5;
+}
+ .img-bottom{
+  width: 40px;
+  height: 34px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.icon{
+  color: #ffffff;
+}
+
+
 /* // Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   .home-top-box {
-    height: 460px;
+    height: 520px;
   }
   .account-name .p-mail1 {
     display: none;
@@ -271,6 +295,8 @@ nav {
    margin-left: 20px;}
  
 }
+
+
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {

@@ -13,10 +13,10 @@
 <body>
     
     <div class="overlay">
-        <img src=" {{asset("assets")}}/imges/interior-design-old-architecture.jpg" alt="">
+        <img src=" {{asset("assets")}}/images/interior-design-old-architecture.jpg" alt="">
     </div>
     <div class="logo">
-        <img src=" {{asset("assets")}}/imges/Untitled-1.png" alt="">
+        <img src=" {{asset("assets")}}/images/Untitled-1.png" alt="">
         <h2>Lawrental.</h2>
     </div>
 

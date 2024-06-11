@@ -17,7 +17,7 @@
     </head>
         <body class="antialiased">
             <div class="overlay">
-            <img src="assets/imges/99.jpg" alt="">
+            <img src="assets/images/99.jpg" alt="">
         </div>
         <div class="home">
             <div class="home-content">

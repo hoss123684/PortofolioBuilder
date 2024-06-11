@@ -1,8 +1,11 @@
 <?php
 
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\SubdomainController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CreateTenant;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CreateController;
+use App\Http\Controllers\WebsiteController;
+use App\Http\Controllers\SubdomainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,7 +44,15 @@ Route::middleware([
     })->name('dashboard');
 });
 
+Route::get('choose' , function(){
+    return view('choose');
+})->name('choose.web');
+
 Route::get('create' , function(){
-    return view('create');
-})->name('createWeb');
+    return view('create.create1');
+})->name('create.web');
+// Route::get('/create-website/{template}', [WebsiteController::class, 'create'])->name('create.web');
+// Route::post('/create-tenant', [WebsiteController::class, 'store'])->name('tenant.store');
+
+
 Route::post('subdomain',[SubdomainController::class,'store'])->name('subdomain.store');
